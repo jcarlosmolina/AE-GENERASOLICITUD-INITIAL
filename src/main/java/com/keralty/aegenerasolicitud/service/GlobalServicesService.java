@@ -404,8 +404,11 @@ public class GlobalServicesService extends AbstractService {
     public com.keralty.aegenerasolicitud.viewmodel.globalservices.siu.TGCREARPERSONACOREResponse tGCREARPERSONACOREImplementation(
             com.keralty.aegenerasolicitud.viewmodel.globalservices.siu.TGCREARPERSONACORERequest request) throws ModelException, SystemException {
         com.keralty.aegenerasolicitud.viewmodel.globalservices.siu.TGCREARPERSONACOREResponse response = new com.keralty.aegenerasolicitud.viewmodel.globalservices.siu.TGCREARPERSONACOREResponse();
-        Persona tGCREARPERSONACOREptPersona = request.getTGCREARPERSONACOREptPersonaInstance();
-        ProteccionDatos tGCREARPERSONACOREptProtDatos = request.getTGCREARPERSONACOREptProtDatosInstance();
+
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGCREARPERSONACOREImplementation");
+        }
+
 
         request.checkArguments();
 
@@ -459,9 +462,11 @@ public class GlobalServicesService extends AbstractService {
     public com.keralty.aegenerasolicitud.viewmodel.globalservices.siu.TGACTPERSONAENCOREResponse tGACTPERSONAENCOREImplementation(
             com.keralty.aegenerasolicitud.viewmodel.globalservices.siu.TGACTPERSONAENCORERequest request) throws ModelException, SystemException {
         com.keralty.aegenerasolicitud.viewmodel.globalservices.siu.TGACTPERSONAENCOREResponse response = new com.keralty.aegenerasolicitud.viewmodel.globalservices.siu.TGACTPERSONAENCOREResponse();
-        Persona tGACTPERSONAENCOREptPersona = request.getTGACTPERSONAENCOREptPersonaInstance();
-        ProteccionDatos tGACTPERSONAENCOREptPrtoDatos = request.getTGACTPERSONAENCOREptPrtoDatosInstance();
-        Solicitud tGACTPERSONAENCOREptSolicitud = request.getTGACTPERSONAENCOREptSolicitudInstance();
+
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGACTPERSONAENCOREImplementation");
+        }
+
 
         request.checkArguments();
 
@@ -612,7 +617,11 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse tGNOTIFICARCREARImplementation(
             com.keralty.aegenerasolicitud.viewmodel.globalservices.siu.TGNOTIFICARCREARRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
-        String tGNOTIFICARCREARptDatosContrato = request.getTGNOTIFICARCREARptDatosContrato();
+
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGNOTIFICARCREARImplementation");
+        }
+
 
         request.checkArguments();
 
@@ -736,7 +745,11 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse tGNOTIFICARINCLUSIONImplementation(
             com.keralty.aegenerasolicitud.viewmodel.globalservices.siu.TGNOTIFICARINCLUSIONRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
-        String tGNOTIFICARINCLUSIONptDatosInclusion = request.getTGNOTIFICARINCLUSIONptDatosInclusion();
+
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGNOTIFICARINCLUSIONImplementation");
+        }
+
 
         request.checkArguments();
 
@@ -860,7 +873,11 @@ public class GlobalServicesService extends AbstractService {
     public ServiceResponse tGNOTIFICARANULARImplementation(
             com.keralty.aegenerasolicitud.viewmodel.globalservices.siu.TGNOTIFICARANULARRequest request) throws ModelException, SystemException {
         ServiceResponse response = new ServiceResponse();
-        String tGNOTIFICARANULARptDatoAnulacion = request.getTGNOTIFICARANULARptDatoAnulacion();
+
+        if (request == null) {
+            throw new IllegalArgumentException("Invalid request to tGNOTIFICARANULARImplementation");
+        }
+
 
         request.checkArguments();
 
@@ -913,8 +930,8 @@ public class GlobalServicesService extends AbstractService {
     public com.keralty.aegenerasolicitud.viewmodel.globalservices.siu.TGCREARACTPERSONACOREResponse tGCREARACTPERSONACOREImplementation(
             com.keralty.aegenerasolicitud.viewmodel.globalservices.siu.TGCREARACTPERSONACORERequest request) throws ModelException, SystemException {
         com.keralty.aegenerasolicitud.viewmodel.globalservices.siu.TGCREARACTPERSONACOREResponse response = new com.keralty.aegenerasolicitud.viewmodel.globalservices.siu.TGCREARACTPERSONACOREResponse();
-        Solicitud tGCREARACTPERSONACOREptSolicitud = request.getTGCREARACTPERSONACOREptSolicitudInstance();
         Persona tGCREARACTPERSONACOREptPersona = request.getTGCREARACTPERSONACOREptPersonaInstance();
+        Solicitud tGCREARACTPERSONACOREptSolicitud = request.getTGCREARACTPERSONACOREptSolicitudInstance();
 
         request.checkArguments();
 
